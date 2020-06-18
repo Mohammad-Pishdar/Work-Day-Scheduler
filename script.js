@@ -1,6 +1,7 @@
 const currentDayPlaceholder = $("#currentDay");
 const timeInTimeBlocks = $(".input-group-text");
 const timeBlockInput = $(".form-control");
+const saveButton = $(".saveBtn");
 let numericCurrentTime = parseInt(moment().format("h A"));
 
 
@@ -27,5 +28,9 @@ function timeBlocksColorDeterminator() {
     }
 }
 
+saveButton.on("click", function () {
+    console.log("click");
+    localStorage.setItem("timeBlockNotes", timeBlockInput[this.id].value);
+})
 
 timeBlocksColorDeterminator();
