@@ -5,7 +5,6 @@ const saveButton = $(".saveBtn");
 let numericCurrentTime = parseInt(moment().format("H A"));
 let notes = [];
 
-
 currentDayPlaceholder.append(moment().format('dddd, MMMM Do'));
 
 function timeBlocksColorDeterminator() {
@@ -44,7 +43,6 @@ function appStart() {
 
 
 }
-
 
 saveButton.on("click", function () {
     console.log("click");
