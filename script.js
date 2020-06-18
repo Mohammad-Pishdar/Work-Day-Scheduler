@@ -1,23 +1,31 @@
 const currentDayPlaceholder = $("#currentDay");
 const timeInTimeBlocks = $(".input-group-text");
 const timeBlockInput = $(".form-control");
+let numericCurrentTime = parseInt(moment().format("h A"));
+
 
 currentDayPlaceholder.append(moment().format('dddd, MMMM Do'));
 
 function timeBlocksColorDeterminator() {
-
     for (let i = 0; i < timeInTimeBlocks.length; i++) {
+
+        let numericTimeinTimeBlock = parseInt($(timeInTimeBlocks[i]).text());
+
         if (moment().format("h A") === $(timeInTimeBlocks[i]).text()) {
             $(timeBlockInput[i]).addClass("present");
-        } else {
-            if (parseInt(moment().format("h A")) > parseInt($(timeInTimeBlocks[i]).text())) {
-                $(timeBlockInput[i]).addClass("past");
-            } else {
-                $(timeBlockInput[i]).addClass("future");
-            }
-
         }
+        if (numericCurrentTime > numericTimeinTimeBlock && $(timeInTimeBlocks[i]).hasClass("pm")) {
+            $(timeBlockInput[i]).addClass("future");
+        }
+        if (parseInt(moment().format("h A")) > numericTimeinTimeBlock) {
+            $(timeBlockInput[i]).addClass("past");
+        }
+        if (parseInt(moment().format("h A")) < numericTimeinTimeBlock) {
+            $(timeBlockInput[i]).addClass("future");
+        }
+
     }
 }
+
 
 timeBlocksColorDeterminator();
