@@ -3,13 +3,12 @@ const timeInTimeBlocks = $(".input-group-text");
 const timeBlockInput = $(".form-control");
 const saveButton = $(".saveBtn");
 let numericCurrentTime = parseInt(moment().format("H A"));
+let notes = [];
 
 
 currentDayPlaceholder.append(moment().format('dddd, MMMM Do'));
 
 function timeBlocksColorDeterminator() {
-
-    localStorage.getItem("timeBlockNotes");
 
     for (let i = 0; i < timeInTimeBlocks.length; i++) {
 
@@ -28,9 +27,32 @@ function timeBlocksColorDeterminator() {
     }
 }
 
+function appStart() {
+
+    if (localStorage.length !== 0) {
+        notes = JSON.parse(localStorage.getItem("timeBlockNotes"));
+
+        for (let i = 0; i < notes.length; i++) {
+
+            timeBlockInput[parseInt(notes[i].id)].value = notes[i].value;
+
+        }
+        timeBlocksColorDeterminator();
+    } else {
+        timeBlocksColorDeterminator();
+    }
+
+
+}
+
+
 saveButton.on("click", function () {
     console.log("click");
-    localStorage.setItem("timeBlockNotes", timeBlockInput[this.id].value);
+    notes.push({
+        value: timeBlockInput[this.id].value,
+        id: this.id
+    })
+    localStorage.setItem("timeBlockNotes", JSON.stringify(notes));
 })
 
-timeBlocksColorDeterminator();
+appStart();
