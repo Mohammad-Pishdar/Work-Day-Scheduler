@@ -20,16 +20,16 @@ This projec is an inetrenet-based app that runs inside the browser so you don't 
 
 When you first start the app, the current day is displayed at the top of the calendar. You are presented with time blocks for that day that include the standard 9am to 5pm business hours. Each time block is color coded to indicate whether it is in the past (gray), present (red) or future (green). You can enter an event by typing inside the selected time blocks and when you click the corresponding save button the text for that event will be saved on local storgae of your browser so even if you close and open the app again or hit the refresh button, you will still have access to your previous notes.  
 
-![alt text](https://github.com/Mohammad-Pishdar/quiz/blob/master/ezgif.com-gif-maker.gif)
+![alt text](https://github.com/Mohammad-Pishdar/Work-Day-Scheduler/blob/master/record.gif)
 
 
 ## Credits
 
-The idea about how to structure the questions and answers array has been taken watching this video [YouTube](https://www.youtube.com/watch?v=riDzcEQbX6k&t=1019s). I also want to thank my amazing instructor Karl Kassebaum and my extraoridnarily helful mentor Wagner Lopes for their great insights and immense help.
+I would like to thank Toby Rahilly, my amazing instructor for his ongoing efforts to make his students more and more skilled by each passing day and for his patience with me.
 
 ## License
 
-You can see the license [here](https://github.com/Mohammad-Pishdar/quiz/blob/master/LICENSE).
+You can see the license [here](https://github.com/Mohammad-Pishdar/Work-Day-Scheduler/blob/master/LICENSE).
 
 
 
