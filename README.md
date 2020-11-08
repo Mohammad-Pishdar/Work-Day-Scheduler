@@ -13,7 +13,7 @@ A simple calendar application that allows the user to save events for each hour 
 
 ## Installation
 
-This projec is an inetrenet-based app that runs inside the browser so you don't need to install anything. All you need is an internet browser to run the app. 
+This projec is an inetrenet-based app that runs inside the browser so you don't need to install anything. All you need is an internet browser to run the app. To see the app in action click here: https://mohammad-pishdar.github.io/Work-Day-Scheduler/
 
 
 ## Usage 
